@@ -39,25 +39,21 @@ public class Labcorp_DashboardPage extends PageObject {
 	
 	public void clickOnSearchBox()
 	{	
-		try
-		{
+		
 		
 	WebElement searchBox= $(By.xpath("//*[@id='typehead']"));
 	searchBox.sendKeys("Software Engineer in Test (SDET) Bangalore,India");
-	WebElement suggestion = $(By.xpath("//*[@id='typehead-result-item-0']"));
+	/*
+	 * WebElement suggestion = $(By.xpath("//*[@id='typehead-result-item-0']"));
+	 * 
+	 * waitFor(suggestion).click();
+	 */
 	
-	waitFor(suggestion).click();
-		}
-		catch (StaleElementReferenceException e) {
-			WebElement suggestion = $(By.xpath("//*[@id='typehead-result-item-0']"));
+	WebElement searchicon = $(By.xpath("//*[@id='ph-search-backdrop']"));
+	searchicon.click();
+	WebElement Job = $(By.xpath("//div[@class='job-title']/span[contains(text(),'Software Engineer in Test (SDET)')]"));
+	waitFor(Job).click();		
 			
-			waitFor(suggestion).click();
-		}
-		catch(Exception e)
-		{
-			WebElement searchicon = $(By.xpath("//*[@id='ph-search-backdrop']"));
-			WebElement Job = $(By.xpath("//div[@class='job-title']/span[contains(text(),'Software Engineer in Test (SDET)')]"));
-			waitFor(Job).click();
-		}
 	}
+
 }
