@@ -1,0 +1,16 @@
+Serenity BDD Web Automation
+
+1. To start test run, test Runner is in Below Loaction
+C:\Serenity\serenity-cucumber-starter-master\src\test\java\starter \CucumberTestSuite.java
+
+2. Serenity Bdd report will be generated in 
+C:\Serenity\serenity-cucumber-starter-master\target\site\serenity\index.html
+
+3.Featuer file path
+C:\Serenity\serenity-cucumber-starter-master\src\test\resources\features
+
+4. step Defenition file pathe
+C:\Serenity\serenity-cucumber-starter-master\src\test\java\starter\stepdefinitions
+
+5. All pages and page objects are in below path
+C:\Serenity\serenity-cucumber-starter-master\src\test\java\pages
